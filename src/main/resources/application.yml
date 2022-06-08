@@ -13,3 +13,9 @@ netty:
   default:
     allocator:
       max-order: 3
+query:
+  error: "Firestore provides limited support for logical OR queries. The in, and array-contains-any operators support a logical OR of up to 10 equality (==) or array-contains conditions on a single field. For other cases, create a separate query for each OR condition and merge the query results in your app.
+  In a compound query, range (<, <=, >, >=) and not equals (!=, not-in) comparisons must all filter on the same field.
+  You can use at most one array-contains clause per query. You can't combine array-contains with array-contains-any.
+  You can use at most one in, not-in, or array-contains-any clause per query. You can't combine in , not-in, and array-contains-any in the same query.
+  You can't order your query by a field included in an equality (==) or in clause"
